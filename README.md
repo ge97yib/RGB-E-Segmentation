@@ -3,11 +3,12 @@
 This repository contains the implementation of **multi-modal semantic segmentation** using RGB and event camera data. The project is based on my Master's thesis work:  
 > *Multi-Modal Fusion of Image Sequences for Dense Prediction with RGB and Event Cameras in Autonomous Driving*
 
-![RGB-E segmentation Results](D:\RGBX_Semantic_Segmentation\pic\RGB-E.png)
+Here is the segmentation on DSEC dataset(real-world) and DELIVER dataset(synthetic).
+![RGB-E segmentation Results](pic\RGB-E.png)
 
-![RGB-Thermal Segmentation Results](D:\RGBX_Semantic_Segmentation\pic\RGB-Thermal.png)
+<!-- ![RGB-Thermal Segmentation Results](pic\RGB-Thermal.png) -->
 
-![RGB-E/D Segementation Results(synthetic dataset)](D:\RGBX_Semantic_Segmentation\pic\Synthetic_pic.png)
+![RGB-E/D Segementation Results(synthetic dataset)](pic\Synthetic_pic.png)
 
 ## Project Overview
 
