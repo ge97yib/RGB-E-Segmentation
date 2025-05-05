@@ -4,11 +4,12 @@ This repository contains the implementation of **multi-modal semantic segmentati
 > *Multi-Modal Fusion of Image Sequences for Dense Prediction with RGB and Event Cameras in Autonomous Driving*
 
 Here is the segmentation on DSEC dataset(real-world) and DELIVER dataset(synthetic).
-![RGB-E segmentation Results](pic\RGB-E.png)
+
+![RGB-E segmentation Results](pic/RGB-E.png)
 
 <!-- ![RGB-Thermal Segmentation Results](pic\RGB-Thermal.png) -->
 
-![RGB-E/D Segementation Results(synthetic dataset)](pic\Synthetic_pic.png)
+![RGB-E/D Segementation Results(synthetic dataset)](pic/Synthetic_pic.png)
 
 ## Project Overview
 
