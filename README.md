@@ -12,7 +12,7 @@ By fusing these complementary modalities, the system constructs a more complete 
 ## Project Structure
 
 ```
-RGBX_Semantic_Segmentation/
+RGB_E_Segmentation/
 ├── config*.py              # Various configuration files for different datasets
 ├── eval.py                # Evaluation entry point
 ├── requirements.txt       # Required Python packages
@@ -30,7 +30,7 @@ RGBX_Semantic_Segmentation/
 ```bash
 # Clone this repository
 git clone https://github.com/ge97yib/RGB-E-Segmentation.git
-cd RGBX_Semantic_Segmentation
+cd RGB_E_Segmentation
 
 # Install dependencies
 pip install -r requirements.txt
@@ -52,34 +52,47 @@ python _train.py --config config_nyudepth.py
 python eval.py --config config_nyudepth.py
 ```
 
-## Fusion Strategies
+<!-- ## Fusion Strategies
 
 Implemented fusion modules include:
 
 - Attention-based RGB-event fusion
 - AdaIN-style feature alignment
-- Dual-stream encoder-decoder architectures
+- Dual-stream encoder-decoder architectures -->
 
 ## Supported Datasets
 
-- NYUDv2
-- DSEC
-- SUN RGB-D
 - DDD17
+- DSEC
+- MFNet
+- DELIVER
+- NYUDv2
+- SUN RGB-D
 
 Modify the config files accordingly to adapt to your target dataset.
 
-## Citation
+## Acknowledgements
+
+This project builds upon ideas and code from the following repositories:
+
+- [Cascaded RGB-D Salient Object Detection (JingZhang617)](https://github.com/JingZhang617/cascaded_rgbd_sod)
+- [RGBX Semantic Segmentation (huaaaliu)](https://github.com/huaaaliu/RGBX_Semantic_Segmentation)
+
+We thank the original authors for their contributions and open-sourcing their work.
+
+
+
+<!-- ## Citation
 
 If you use this work in your research or derive from it, please consider citing:
 
 ```
 Mengyu Li. "Multi-Modal Fusion of Image Sequences for Dense Prediction with RGB and Event Cameras in Autonomous Driving." Master's Thesis, Technical University of Munich, 2025.
-```
+```  -->
 
-## License
+<!-- ## License
 
-This repository contains modified components from other open-source projects. Please check individual files for license information where applicable. All modifications made by Mengyu Li are released under [MIT License](https://opensource.org/licenses/MIT).
+This repository contains modified components from other open-source projects. Please check individual files for license information where applicable. All modifications made by Mengyu Li are released under [MIT License](https://opensource.org/licenses/MIT). -->
 
 ---
 
