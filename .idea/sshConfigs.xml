@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="tang@SWS04.vc.cit.tum.de" id="660ff00c-b83b-47a6-b8fc-cf7bf6de362d" port="22" nameFormat="DESCRIPTIVE" username="tang" useOpenSSHConfig="true" />
+    </configs>
+  </component>
+</project>

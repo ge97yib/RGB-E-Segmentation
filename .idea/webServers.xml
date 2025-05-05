@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a5a06bed-6091-4885-a596-779c762da4db" name="tang">
+        <fileTransfer accessType="SFTP" host="tang@SWS04.vc.cit.tum.de" port="22" sshConfigId="660ff00c-b83b-47a6-b8fc-cf7bf6de362d" sshConfig="tang@tang@SWS04.vc.cit.tum.de:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
