@@ -37,6 +37,31 @@ pip install -r requirements.txt
 ```
 
 ### Dataset Preparation
+The dataset folder would be structured like:
+```bash
+    <datasets>
+    |-- <DatasetName1>
+        |-- <RGBFolder>
+            |-- <name1>.<ImageFormat>
+            |-- <name2>.<ImageFormat>
+            ...
+        |-- <ModalXFolder>
+            |-- <name1>.<ModalXFormat>
+            |-- <name2>.<ModalXFormat>
+            ...
+        |-- <LabelFolder>
+            |-- <name1>.<LabelFormat>
+            |-- <name2>.<LabelFormat>
+            ...
+        |-- train.txt
+        |-- test.txt
+```
+
+In train.txt and test.txt, please save the items as
+```bash
+    <name1>
+    <name2>
+```
 
 Place your dataset in a structured directory and modify the corresponding config file (e.g. `config_nyudepth.py`, `config_dsec.py`, etc.) to point to your data path.
 
@@ -49,7 +74,7 @@ python _train.py --config config_nyudepth.py
 ### Evaluation
 
 ```bash
-python eval.py --config config_nyudepth.py
+python eval.py -e "epoch"
 ```
 
 <!-- ## Fusion Strategies
