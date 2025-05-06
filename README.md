@@ -110,6 +110,7 @@ This project builds upon ideas and code from the following repositories:
 
 - [Cascaded RGB-D Salient Object Detection (JingZhang617)](https://github.com/JingZhang617/cascaded_rgbd_sod)
 - [RGBX Semantic Segmentation (huaaaliu)](https://github.com/huaaaliu/RGBX_Semantic_Segmentation)
+- [FRN (HuCaoFighting)](https://github.com/HuCaoFighting/FRN)
 
 We thank the original authors for their contributions and open-sourcing their work.
 

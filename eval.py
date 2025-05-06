@@ -170,7 +170,6 @@ if __name__ == "__main__":
                     'x_root':config.x_root_folder,
                     'x_format': config.x_format,
                     'x_single_channel': config.x_is_single_channel,
-                    #'class_names': config.class_names,
                     'train_source': config.train_source,
                     'eval_source': config.eval_source,
                     'class_names': config.class_names}
@@ -187,58 +186,3 @@ if __name__ == "__main__":
         segmentor.run(config.checkpoint_dir, args.epochs, config.val_log_file,
                       config.link_val_log_file)
         
-    # Calculate and log FLOPs and total parameters after evaluation using real images
-    # device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-    # network.to(device)
-
-    # dataset_name = config.dataset_name
-    # # Create dummy inputs for img and modal_x with size 480x640
-    # dummy_img = torch.randn(1, 3, 480, 640).to(device)  # (batch_size, channels, height, width)
-    # dummy_modal_x = torch.randn(1, 3, 480, 640).to(device)  # Adjust shape as per your model requirements
-
-    # dummy_img_2 = torch.randn(1, 3, 512, 512).to(device)  # (batch_size, channels, height, width)
-    # dummy_modal_x_2 = torch.randn(1, 3, 512, 512).to(device)  # Adjust shape as per your model requirements
-
-    # dummy_img_3 = torch.randn(1, 3, 200, 346).to(device)  # (batch_size, channels, height, width)
-    # dummy_modal_x_3 = torch.randn(1, 3, 200, 346).to(device)  # Adjust shape as per your model requirements
-
-    # # Calculate FLOPs considering both inputs
-    # flops = torchprofile.profile_macs(network, (dummy_img, dummy_modal_x)) * 2  # Each MAC is 2 FLOPs
-    # total_params = sum(p.numel() for p in network.parameters())
-    # # Calculate FLOPs considering both inputs
-    # flops_2 = torchprofile.profile_macs(network, (dummy_img_2, dummy_modal_x_2)) * 2  # Each MAC is 2 FLOPs
-    # total_params_2 = sum(p.numel() for p in network.parameters())
-    # # Calculate FLOPs considering both inputs
-    # flops_3 = torchprofile.profile_macs(network, (dummy_img_3, dummy_modal_x_3)) * 2  # Each MAC is 2 FLOPs
-    # total_params_3 = sum(p.numel() for p in network.parameters())
-
-
-    # logger.info(f"Total FLOPs (input size 480x640): {flops}") #480x640
-    # logger.info(f"Total Parameters: {total_params}")
-
-    # # ========= 新增：测算模型推理速度(FPS) =========
-    # avg_time, fps = measure_inference_speed(network, device, warmup=10, test_runs=100)
-    # logger.info(f"Average inference time per frame: {avg_time} seconds")
-    # logger.info(f"FPS: {fps}")
-
-    # logger.info(f"Total FLOPs (input size 512x512): {flops_2}") #480x640
-    # logger.info(f"Total Parameters: {total_params_2}")
-    # # Write FLOPs and Params to val_log_file
-    # with open(config.val_log_file, 'a') as log_file:
-    #     log_file.write(f"\nDataset: '{dataset_name}'\n")
-    #     log_file.write(f"\nInput size '480x640':\n") #480x640
-    #     log_file.write(f"\nEvaluation on checkpoint '{args.epochs}':\n")
-    #     log_file.write(f"Total FLOPs: {flops}\n")
-    #     log_file.write(f"Total Parameters: {total_params}\n")
-    #     log_file.write(f"Average inference time per frame: {avg_time} seconds\n")
-    #     log_file.write(f"FPS: {fps}\n")
-
-    #     log_file.write(f"\nInput size '512x512':\n") #512x512
-    #     log_file.write(f"\nEvaluation on checkpoint '{args.epochs}':\n")
-    #     log_file.write(f"Total FLOPs: {flops_2}\n")
-    #     log_file.write(f"Total Parameters: {total_params_2}\n")
-
-    #     log_file.write(f"\nInput size '200x346':\n") #200x346
-    #     log_file.write(f"\nEvaluation on checkpoint '{args.epochs}':\n")
-    #     log_file.write(f"Total FLOPs: {flops_3}\n")
-    #     log_file.write(f"Total Parameters: {total_params_3}\n")
